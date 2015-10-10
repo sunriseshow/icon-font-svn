@@ -29,7 +29,7 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
  
  ##PC端应用教程
  
- －　font-face声明字体
+ －font-face声明字体
  ``` python
  　　@font-face {font-family: 'iconfont';
  　　
@@ -53,6 +53,7 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
 　　font-size:16px;font-style:normal;
 　　}
   ```
+  
  
  
  
