@@ -50,12 +50,25 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
  －定义使用iconfont的样式
  
  ``` python
-　.iconfont{font-family:"iconfont";
+　.iconfont{
+　  font-family:"iconfont";
 　　font-size:16px;font-style:normal;
+　　-webkit-font-smoothing: antialiased; 抗锯齿显示样式，safair或chrome
+　　display: block; 如果出现小方块，在ie7下，则加这句话
+　　-webkit-text-stroke-width: 0.2px;  pc的chrome出现严重的锯齿
 　　}
   ```
   
- 
+  
+  -页面引用
+  
+  ``` python
+  <i class="iconfont">&#33</i>
+  ```
+  
+  ##icon font制作
+  
+  
  
  
  
