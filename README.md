@@ -31,20 +31,21 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
  
  －font-face声明字体
  ``` python
- 　　@font-face {font-family: 'iconfont';
- 　　
-    src: url('iconfont.eot'); /* IE9*/
-    
-    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    
-    url('iconfont.woff') format('woff'), /* chrome、firefox */
-    
-    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    
-    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
-    
-　　}
- ```
+ 
+　@font-face {font-family: 'iconfont';
+　
+ src: url('iconfont.eot'); /* IE9*/
+ 
+ src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+
+ url('iconfont.woff') format('woff'), /* chrome、firefox */
+
+ url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+
+ url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+
+}
+```
  
  －定义使用iconfont的样式
  
