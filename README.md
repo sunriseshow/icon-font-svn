@@ -78,13 +78,17 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
         [参考网址](http://www.w3cfuns.com/article-1300-2.html)
         [参考网址](http://www.cnblogs.com/demix/archive/2009/11/28/1612715.html)
   
+  
+  
   ##icon font制作 
      
   把制作好的AI图,另存为svg, 然后通过网址http://www.iconfont.cn/icons/uploadShow  上传, 点击加入购物车，然后再购物车中下载，会生成调用demo，进行对图片字段的调用。
   
   以上是icon font 字体的使用，下面介绍svg的应用。
   
-  #SVG的应用
+  # SVG的应用
+  
+  
   
   
   
