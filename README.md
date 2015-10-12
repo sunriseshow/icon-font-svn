@@ -54,6 +54,7 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
 　  font-family:"iconfont";
 　　font-size:16px;font-style:normal;
 　　-webkit-font-smoothing: antialiased; 抗锯齿显示样式，safair或chrome
+　　-moz-osx-font-smoothing: grayscale;
 　　display: block; 如果出现小方块，在ie7下，则加这句话
 　　-webkit-text-stroke-width: 0.2px;  pc的chrome出现严重的锯齿
 　　}
@@ -65,8 +66,28 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
   ``` python
   <i class="iconfont">&#33</i>
   ```
+  应用注意事项：
   
-  ##icon font制作
+  -只在你确定你非常需要 @font-face的时候才使用他
+  -将你的@font-face定义在所有的SCRIPT标签前
+  -如果你有许多字体文件，考虑将它们分散到几个域名下。
+  -不要包含没有使用的 @font-face声明——IE将不分它使用与否，通通加载
+  -Gzip字体文件，同时给它们一个未来的过期头部声明
+  -考虑字体文件的后加载，起码对于IE。
+  
+        [参考网址](http://www.w3cfuns.com/article-1300-2.html)
+        [参考网址](http://www.cnblogs.com/demix/archive/2009/11/28/1612715.html)
+  
+  ##icon font制作 
+     
+  把制作好的AI图,另存为svg, 然后通过网址http://www.iconfont.cn/icons/uploadShow  上传, 点击加入购物车，然后再购物车中下载，会生成调用demo，进行对图片字段的调用。
+  
+  以上是icon font 字体的使用，下面介绍svg的应用。
+  
+  #SVG的应用
+  
+  
+  
   
   
  
