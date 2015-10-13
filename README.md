@@ -87,3 +87,118 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
   
 #SVG的应用
 
+SVG可缩放矢量图形（Scalable Vector Graphics）是基于可扩展标记语言（XML），用于描述二维矢量图形的一种图形格式。
+###特点
+
+1．任意放缩。
+     用户可以任意缩放图像显示，而不会破坏图像的清晰度、细节等。
+2．文本独立。
+     SVG图像中的文字独立于图像，文字保留可编辑和可搜寻的状态。也不会再有字体的限制，用户系统即使没有安装某一字   体，也会看到和他们制作时完全相同的画面。
+3．较小文件。
+     总体来讲，SVG文件比那些GIF和JPEG格式的文件要小很多，因而下载也很快。
+4．超强显示效果
+     SVG图像在屏幕上总是边缘清晰，它的清晰度适合任何屏幕分辨率和打印分辨率。
+5．超级颜色控制。
+    SVG图像提供一个1600万种颜色的调色板，支持ICC颜色描述文件标准、RGB、线X填充、渐变和蒙版。
+
+###使用内联SVG
+
+>SVG作为背景图片使用
+>SVG作为src属性使用
+>内联SVG
+
+###声明一个SVG元素
+
+```python
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+ <!--  svg stuff here  -->
+</svg>
+```
+
+###创建SVG图形
+
+####circle:基础图形，基于中心点以及半径来创建的圆形。
+对于circle元素，我们有3个需要指定的属性。它们是cx，cy，r。cx和cy是圆心在X轴和Y轴上的坐标，如果没有指定的话，它们的默认值为0。r为圆形的半径。一般来说，对一个圆形元素来说我们可以看到如下的标签：
+
+```python
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50"></circle>
+</svg>
+```
+
+####rect:基础图形，基于角的位置和矩形的宽度和高度来创建的矩形。
+
+矩形的创建跟圆形的创建方式差不多。就它最基础的形式来说，我们需要为其指定左上角的的坐标x和y，以及该矩形的宽度width和高度height的值。其标签如下所示：
+
+```python
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+  <rect x="0" y="0" width="200" height="100"></rect>
+</svg>
+```
+####polygon:基础图形，基于坐标点和两点相连而成的直线线段来创建的多边形。
+
+我们可以通过在points属性上的多组 x-y 坐标点来定义我们的多边形元素。这些坐标点通过直线线段来连接。标签声明如下：
+
+```python
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 100">
+  <polygon points="0,50 50,0 150,0 200,50 150,100 50,100"></polygon>
+</svg>
+```
+####path:万能的图形，可以用来创建任意的形状。所有基础图形都能由它来创建。
+path元素是在形状处理方面最强大的元素。在path元素中，我们可以定义d属性，这个属性为我们的路径如何延伸作出了定义。d属性可以让我们通过一系列的命令来指定一个运动轨迹。我们可以用直线命令和弯曲命令来构建一些复杂的形状。但实际上，你并不希望手写贝塞尔曲线这种玩意，二是通过矢量软件来创建并输出SVG。但了解一下他们并不是什么坏事。
+
+M x y:移动到坐标x-y
+L x y:从当前位置画一条直线到坐标x—y
+H x:从当前位置画一条水平线到坐标x
+V y:从当前位置画一条垂直线到坐标y
+Z:闭合路径
+
+```python
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <path d="M 0 0 H 200 V 200 H 0 Z"></path>
+</svg>
+```
+
+fill:元素的填充颜色
+fill-opacity:元素的填充颜色透明度
+stroke:元素的笔画颜色
+stroke-width:元素的笔画宽度
+stroke-opacity:元素的笔画颜色透明度
+
+```python
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <circle class="circle" cx="100" cy="100" r="90" fill="#3399cc" stroke="#333333" stroke-width="5"></circle>
+</svg>
+
+.circle {
+  transition: stroke 0.3s, fill 0.3s;
+}
+
+.circle:hover {
+  stroke: #3399cc;
+  fill: #333333;
+}
+```
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
