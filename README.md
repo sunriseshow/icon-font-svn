@@ -199,27 +199,66 @@ stroke-opacity:元素的笔画颜色透明度
 
 <defs>元素可以用来存储那些我们不想直接显示的内容。换句话说，<defs>元素就是用来定义元件，但是不直接渲染。这个隐藏的存储元件可以在后面被其它SVG元素应用及显示，这使得它非常适合用于绘制那些包含重用图像的图案。
 
+    <svg>
+    <defs>
+        <linearGradient id="gradient">
+            <stop offset="0%" style="stop-color: deepPink"></stop>
+            <stop offset="100%" style="stop-color: #009966"></stop>
+        </linearGradient>
+    </defs>
+
+    <rect stroke="#eee" stroke-width="5" fill="url(#gradient)"></rect>
+</svg>
+
+使用<symbol>对元素进行分组
+
+<symbol>非常适用于定义可重复使用的元件（或符号）。它也可以作为<use>元素实例化的一个模板。而且有viewBox和preserveAspectRatio属性，它可以在引用<use>元素定义的矩形视窗中自适应缩放。注意symbol元素每次被use元素实例化时都可以重新定义新的视窗。
 
 
+SVG SMIL animation
 
+现在这个功能正在逐步被移除，最好不要使用，它是在svg里直接加入动画元素，现在做的时候都用css3书写对元素的操作。
+主要内容有
 
+```
+<set>
+<animate>
+<animateColor>
+<animateTransform>
+<animateMotion>`
+```
 
+     正确的写法举例
+     #mouthTwo{
+           animation:domouth 1s linear infinite;
+            -webkit-animation: domouth 1s linear infinite;
+        }
+        @-webkit-keyframes domouth {
+            from {
+                opacity: 0;
+            }
 
-  
-  
-  
-  
-  
-  
- 
- 
- 
- 
+            50% {
+                opacity: 1;
+            }
+        }
+        @keyframes domouth {
+            from {
+                opacity: 0;
+            }
 
+            50% {
+                opacity: 1;
+            }
+        }
 
+     以前的写法
+     <animate attributeName="opacity" from="1" to="0" begin="0s" dur="3s" repeatCount="indefinite" />
 
+[参考文档](http://www.w3cplus.com/svg/structuring-grouping-referencing-in-svg.html)
+[snap.svg.js](http://www.zhangxinxu.com/GitHub/demo-Snap.svg/demo/basic/Element.asPX.php)   制作svg动画
+[svg教程视频](http://www.imooc.com/learn/143)  
 
-
-
+以上仅供参考
 
 
