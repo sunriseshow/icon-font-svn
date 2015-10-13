@@ -24,15 +24,19 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
 　复杂的交互
 
  然也有一些缺点，例如图标通常只有一种颜色，虽然渐变可以使其颜色更加丰富，但是兼容性没了。还有一些其他的缺点，不过对于
- iconfont 这个工具来说，最大的缺点就是图标太少。国外网站iconfont字体有 [fontello](http://fontello.com/)
+ iconfont 这个工具来说，最大的缺点就是图标太少。国外网站iconfont字体有 [fontello](http://fontello.com/) 可以使用。
+
+
+
+###PC端应用教程
  
+ >font-face声明字体
  
- ##PC端应用教程
+```python
  
- －font-face声明字体
- ``` python
- 
-　@font-face {font-family: 'iconfont';
+　@font-face {
+　
+　font-family: 'iconfont';
 　
  src: url('iconfont.eot'); /* IE9*/
  
@@ -47,9 +51,9 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
 }
 ```
  
- －定义使用iconfont的样式
+ >定义使用的iconfont样式
  
- ``` python
+```python
 　.iconfont{
 　  font-family:"iconfont";
 　　font-size:16px;font-style:normal;
@@ -58,51 +62,28 @@ css3增加了@font-face属性，传统的浏览器是通过font-family来设置�
 　　display: block; 如果出现小方块，在ie7下，则加这句话
 　　-webkit-text-stroke-width: 0.2px;  pc的chrome出现严重的锯齿
 　　}
-  ```
-  
-  
-  -页面引用
-  
-  ``` python
+```
+ >页面引用
+```python
   <i class="iconfont">&#33</i>
-  ```
-  应用注意事项：
+```
+###应用注意事项：
   
-  -只在你确定你非常需要 @font-face的时候才使用他
-  -将你的@font-face定义在所有的SCRIPT标签前
-  -如果你有许多字体文件，考虑将它们分散到几个域名下。
-  -不要包含没有使用的 @font-face声明——IE将不分它使用与否，通通加载
-  -Gzip字体文件，同时给它们一个未来的过期头部声明
-  -考虑字体文件的后加载，起码对于IE。
+  >只在你确定你非常需要 @font-face的时候才使用他
+  >将你的@font-face定义在所有的SCRIPT标签前
+  >如果你有许多字体文件，考虑将它们分散到几个域名下。
+  >不要包含没有使用的 @font-face声明——IE将不分它使用与否，通通加载
+  >Gzip字体文件，同时给它们一个未来的过期头部声明
+  >考虑字体文件的后加载，起码对于IE。
   
-        [参考网址](http://www.w3cfuns.com/article-1300-2.html)
-        [参考网址](http://www.cnblogs.com/demix/archive/2009/11/28/1612715.html)
-  
-  
-  
-  ##icon font制作 
+[参考网址](http://www.w3cfuns.com/article-1300-2.html)
+[参考网址](http://www.cnblogs.com/demix/archive/2009/11/28/1612715.html)
+
+###icon font制作 
      
-  把制作好的AI图,另存为svg, 然后通过网址http://www.iconfont.cn/icons/uploadShow  上传, 点击加入购物车，然后再购物车中下载，会生成调用demo，进行对图片字段的调用。
+把制作好的AI图,另存为svg, 然后通过[网址](http://www.iconfont.cn/icons/uploadShow)  上传, 点击加入购物车，然后在购物车中下载，会生成调用demo，进行对图片字段的调用。
   
-  以上是icon font 字体的使用，下面介绍svg的应用。
+以上是icon font 字体的使用，下面介绍svg的应用。
   
-  # SVG的应用
-  
-  
-  
-  
-  
-  
-  
- 
- 
- 
- 
-
-
-
-
-
-
-
+#SVG的应用
 
